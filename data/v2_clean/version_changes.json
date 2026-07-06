@@ -1,0 +1,38 @@
+{
+  "version_from": "1.0",
+  "version_to": "2.0",
+  "date": "2026-07-06 10:21:00",
+  "summary": {
+    "original_records": 515,
+    "cleaned_records": 475,
+    "records_removed": 40,
+    "removal_percentage": 7.77
+  },
+  "transformations": [
+    {
+      "name": "Missing values",
+      "description": "Removed records with null values in any column",
+      "justification": "Nulls represented less than 4% of total; removal avoids introducing assumptions"
+    },
+    {
+      "name": "Invalid ages",
+      "description": "Removed negative ages and ages > 120 years",
+      "justification": "Clinically impossible values, suggest data entry errors"
+    },
+    {
+      "name": "Duplicate records",
+      "description": "Removed duplicate records",
+      "justification": "Patient ID must be unique"
+    },
+    {
+      "name": "Date standardization",
+      "description": "Converted all dates to datetime format (YYYY-MM-DD)",
+      "justification": "Inconsistent formats prevented temporal analysis"
+    },
+    {
+      "name": "Outlier removal",
+      "description": "Removed 40 multivariate outliers using Mahalanobis distance (cutoff=0.995)",
+      "justification": "Multivariate outliers could distort the model. Heart rate outliers were retained due to potential clinical relevance."
+    }
+  ]
+}

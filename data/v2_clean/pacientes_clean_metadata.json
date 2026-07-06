@@ -1,0 +1,25 @@
+{
+  "version": "2.0",
+  "name": "Clean Patient Dataset",
+  "records": 475,
+  "columns": [
+    "id_paciente",
+    "edad_paciente",
+    "sexo",
+    "peso_kg",
+    "altura_cm",
+    "fecha_registro",
+    "frecuencia_cardiaca_media_bpm",
+    "derivacion_ecg",
+    "frecuencia_muestreo_hz",
+    "etiqueta"
+  ],
+  "target_distribution": {
+    "Normal": 286,
+    "Anormal": 189
+  },
+  "target_percentages": {
+    "Normal": 60.21052631578947,
+    "Anormal": 39.78947368421053
+  }
+}
