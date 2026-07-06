@@ -11,6 +11,7 @@ connection_string = os.environ.get('AZURE_CONNECTION_STRING')
 PATHS_PROJECT = {
     'signals': '../data/v1_raw/senales/',
     'v2': '../data/v2_clean/version_changes.json',
+    'v3': '../data/v3_features/version_changes.json',
     'readme': '../data/README_VERSIONING.md'
 }
 
@@ -47,6 +48,16 @@ TRANSFORMATION_DESCRIPTIONS = {
         'name': 'Outlier removal',
         'description': 'Removed multivariate outliers using Mahalanobis distance',
         'justification': 'Multivariate outliers could distort the model. Heart rate outliers were retained due to potential clinical relevance.'
+    },
+    'feature_engineering': {
+        'name': 'Feature engineering',
+        'description': 'Added IMC (Body Mass Index) calculated from weight and height',
+        'justification': 'IMC is a clinically relevant indicator of body composition'
+    },
+    'ecg_features': {
+        'name': 'ECG signal features',
+        'description': 'Added std_mv (standard deviation of ECG signal)',
+        'justification': 'Captures variability in the ECG signal, which may differ between Normal and Anormal patients'
     }
 }
 
@@ -60,5 +71,7 @@ COLUMNS = {
     'heart_rate': 'frecuencia_cardiaca_media_bpm',
     'ecg_lead': 'derivacion_ecg',
     'sampling_rate': 'frecuencia_muestreo_hz',
-    'label': 'etiqueta'
+    'label': 'etiqueta',
+    'imc': 'imc',
+    'std_mv': 'std_mV',
 }

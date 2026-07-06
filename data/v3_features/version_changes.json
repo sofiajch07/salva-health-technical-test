@@ -1,0 +1,23 @@
+{
+  "version_from": "2.0",
+  "version_to": "3.0",
+  "date": "2026-07-06 17:16:30",
+  "summary": {
+    "original_records": 475,
+    "cleaned_records": 475,
+    "records_removed": 0,
+    "removal_percentage": 0.0
+  },
+  "transformations": [
+    {
+      "name": "Feature engineering",
+      "description": "Added IMC (Body Mass Index) calculated from weight and height",
+      "justification": "IMC is a clinically relevant indicator of body composition"
+    },
+    {
+      "name": "ECG signal features",
+      "description": "Added std_mv (standard deviation of ECG signal)",
+      "justification": "Captures variability in the ECG signal, which may differ between Normal and Anormal patients"
+    }
+  ]
+}

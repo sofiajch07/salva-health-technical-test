@@ -35,5 +35,5 @@ class DataVersion:
     """Data version constants."""
     ORIGINAL_RECORDS = 515
     RAW_PATH = '../data/v1_raw/pacientes.csv'
-    CLEAN_DIR = '../data/v2_clean'
     CLEAN_FILE = '../data/v2_clean/pacientes_clean.csv'
+    FEATURES_FILE = '../data/v3_features/pacientes_features.csv'
