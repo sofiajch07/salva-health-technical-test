@@ -2,6 +2,12 @@
 Constants and text messages used across the project.
 """
 
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+connection_string = os.environ.get('AZURE_CONNECTION_STRING')
+
 PATHS_PROJECT = {
     'signals': '../data/v1_raw/senales/',
     'v2': '../data/v2_clean/version_changes.json',

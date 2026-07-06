@@ -28,6 +28,8 @@ from .data_versioning import (
     save_version_changes,
     create_versioning_readme
 )
+from .cloud_storage import upload_csv_to_azure
+
 
 __all__ = [
     # enums
@@ -61,5 +63,6 @@ __all__ = [
     'create_version_changes',
     'save_version_changes',
     'create_versioning_readme',
-    
+    # cloud_storage
+    'upload_csv_to_azure',
 ]
