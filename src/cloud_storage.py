@@ -2,6 +2,7 @@
 Cloud storage utilities for reading and uploading data from Azure Storage.
 """
 
+import io
 import pandas as pd
 from azure.storage.blob import BlobServiceClient
 
@@ -19,7 +20,7 @@ def read_csv_from_azure(connection_string, container_name, blob_name):
     blob_service_client = BlobServiceClient.from_connection_string(connection_string)
     blob_client = blob_service_client.get_blob_client(container=container_name, blob=blob_name)
     content = blob_client.download_blob().content_as_bytes()
-    return pd.read_csv(pd.compat.StringIO(content.decode('utf-8')))
+    return pd.read_csv(io.StringIO(content.decode('utf-8')))
 
 
 def upload_csv_to_azure(df, connection_string, container_name, blob_name):

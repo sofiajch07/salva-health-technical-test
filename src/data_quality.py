@@ -52,6 +52,18 @@ def standardize_dates(df, column_name):
     df[column_name] = pd.to_datetime(df[column_name])
     return df
 
+
+def get_duplicate_report(df):
+    """
+    Generate duplicate records report.
+    """
+    total_duplicates = df.duplicated().sum()
+    return {
+        'total_duplicates': total_duplicates,
+        'duplicate_percentage': (total_duplicates / len(df)) * 100
+    }
+
+
 def get_missing_values_report(df):
     """
     Generate missing values report.

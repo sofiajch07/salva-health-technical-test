@@ -13,7 +13,8 @@ from .data_quality import (
     filter_age,
     print_unique_values,
     print_multiple_unique_values,
-    compare_mean_median
+    compare_mean_median,
+    get_duplicate_report,
 )
 from .outlier_detection import (
     detect_multivariate_outliers,
@@ -28,8 +29,21 @@ from .data_versioning import (
     save_version_changes,
     create_versioning_readme
 )
-from .cloud_storage import upload_csv_to_azure
-
+from .cloud_storage import (
+    upload_csv_to_azure, 
+    read_csv_from_azure
+)
+from .eda_utils import (
+    get_categorical_summary,
+    get_numerical_summary,
+    plot_categorical_distribution,
+    plot_numerical_distribution,
+    plot_correlation_heatmap,
+    get_signal_summary,
+    plot_ecg_examples,
+    plot_box_grid,
+    load_ecg_signal
+)
 
 __all__ = [
     # enums
@@ -51,6 +65,7 @@ __all__ = [
     'compare_mean_median',
     'print_unique_values',
     'print_multiple_unique_values',
+    'get_duplicate_report',
     # outlier_detection
     'detect_multivariate_outliers',
     'remove_multivariate_outliers',
@@ -65,4 +80,15 @@ __all__ = [
     'create_versioning_readme',
     # cloud_storage
     'upload_csv_to_azure',
+    'read_csv_from_azure',
+    # eda_utils
+    'get_categorical_summary',
+    'get_numerical_summary',
+    'plot_categorical_distribution',
+    'plot_numerical_distribution',
+    'plot_correlation_heatmap',
+    'get_signal_summary',
+    'plot_ecg_examples',
+    'plot_box_grid',
+    'load_ecg_signal'
 ]
