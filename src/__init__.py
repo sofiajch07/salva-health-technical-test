@@ -42,7 +42,15 @@ from .eda_utils import (
     get_signal_summary,
     plot_ecg_examples,
     plot_box_grid,
-    load_ecg_signal
+    load_ecg_signal,
+)
+from .modeling_utils import (
+    load_patient_dataset,
+    prepare_dataset_for_modeling,
+    plot_confusion_matrix,
+    prepare_features,
+    train_and_evaluate,
+    plot_error_by_quantile_bar
 )
 
 __all__ = [
@@ -90,5 +98,12 @@ __all__ = [
     'get_signal_summary',
     'plot_ecg_examples',
     'plot_box_grid',
-    'load_ecg_signal'
+    'load_ecg_signal',
+    # modeling_utils
+    'load_patient_dataset',
+    'prepare_dataset_for_modeling',
+    'plot_confusion_matrix',
+    'plot_error_by_quantile_bar',
+    'prepare_features',
+    'train_and_evaluate'
 ]

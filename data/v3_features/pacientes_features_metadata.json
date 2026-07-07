@@ -12,7 +12,13 @@
     "frecuencia_cardiaca_media_bpm",
     "derivacion_ecg",
     "frecuencia_muestreo_hz",
-    "etiqueta"
+    "etiqueta",
+    "n_samples",
+    "duration_seg",
+    "sampling_rate_hz",
+    "std_mV",
+    "range_mV",
+    "imc"
   ],
   "target_distribution": {
     "Normal": 286,
