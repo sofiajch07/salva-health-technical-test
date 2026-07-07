@@ -48,6 +48,7 @@ Buscando la mantenibilidad del código se separaron las responsabilidades. Es po
 en la carpeta src se encuentra con diferentes utils ya que se busca reutilizar funciones, como por ejemplo de limpieza o validación a lo largo
 de todo el proyecto. Además, se cuenta con archivos como constants o enum para reducir la cantidad de texto hardcodeado en el código y que este sea 
 más fácil de mantener.
+```
 ├── data
 │   ├── README_VERSIONING.md
 │   ├── v1_raw
@@ -79,3 +80,4 @@ más fácil de mantener.
 │   ├── enums.py
 │   ├── modeling_utils.py
 │   └── outlier_detection.py
+```
