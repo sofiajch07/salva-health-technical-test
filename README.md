@@ -11,7 +11,7 @@ características y un modelo baseline de clasificación (Regresión Logística).
 - **EDA**: análisis de variables clínicas y de la señal ECG cruda (250 Hz, 10s por paciente), incluyendo verificación de consistencia de la señal y comparación de variables por grupo.
 - **Feature engineering**: cálculo de IMC y desviación estándar de la señal (`std_mV`).
 - **Modelado**: Regresión Logística con `class_weight='balanced'`, evaluada con precision, recall, F1 y AUC-ROC, y comparada contra el dataset sin limpiar.
-- **Reporte técnico**: `reports/Prueba_Técnica_Salva_Health.pdf`, con metodología, decisiones, limitaciones y trabajo futuro.
+- **Reporte técnico**: `reports/Technical_report_Salva_Health.pdf`, con metodología, decisiones, limitaciones y trabajo futuro.
 
 ## Cómo correrlo
 
