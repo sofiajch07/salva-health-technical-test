@@ -18,5 +18,7 @@ This document describes the different versions of the dataset used in this proje
 
 ## Version 3.0 - Feature Engineered Data
 - **Location**: `v3_features/`
-- **Status**: Pending
-- **Description**: Pending
+- - **File**: `pacientes_features.csv`
+- **Records**: 475
+- **Description**: Dataset with derived variables and ECG signal features.
+- **Transformations**: See `version_changes.json` for complete details.
